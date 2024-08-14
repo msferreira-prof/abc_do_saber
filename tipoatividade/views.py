@@ -7,3 +7,10 @@ def inicio(request):
 
 def fim(request):
     return HttpResponse('acabou!')
+
+def cadastrar(request):
+    return render(request, 'tipoatividade/cadastroTiposAtividade.html')
+
+def listar(request):
+    return render(request, 'tipoatividade/listarTiposAtividade.html')
+

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- define e insere um favicon no documento HTML -->
-    <link href="{% static './img/php.ico' %}" rel="shortcut icon">
+    <link href="./img/php.ico" rel="shortcut icon">
 
     <!-- versao gratuita do Font Awesome icons-->
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
@@ -21,7 +21,7 @@
     <!-- Google  icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link href="{% static './css/meu-estilo.css' %}" rel="stylesheet">
+    <link href="{% static '/css/meu-estilo.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -48,8 +48,8 @@
             <!-- menu -->
             <div class="collapse navbar-collapse justify-content-end" id="mynavbar">
                 <div class="navbar-nav">
-                    <a href="{% url 'escola' %}" class="nav-link">Início</a>
-                    <a href="{% url 'cadastrar' %}" class="nav-link">Tipos de Atividade</a>
+                    <a href="./escola.html" class="nav-link">Início</a>
+                    <a href="./tipoatividade/cadastroTiposAtividade.html" class="nav-link">Tipos de Atividade</a>
                     <a href="./titulo/cadastroTitulos.html" class="nav-link">Títulos</a>
                     <a href="./aluno/cadastroAluno.html" class="nav-link">Alunos</a>
                     <a href="./instrutor/cadastroInstrutor.html" class="nav-link">Instrutor</a>
