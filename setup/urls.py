@@ -23,5 +23,6 @@ from tipoatividade.views import fim
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('escola/', include('escola.urls')),
-    path('tipoatividade/', include('tipoatividade.urls'))
+    path('tipoatividade/', include('tipoatividade.urls')),
+    path('titulo/', include('titulo.urls')),    
 ]
