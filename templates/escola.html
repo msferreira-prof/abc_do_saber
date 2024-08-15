@@ -3,12 +3,12 @@
 <html lang="pt-br">
 
 <head>
-    <title>PHP - Exercícios</title>
+    <title>Python - Exercícios</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- define e insere um favicon no documento HTML -->
-    <link href="{% static './img/php.ico' %}" rel="shortcut icon">
+    <link href="{% static './img/python.ico' %}" rel="shortcut icon">
 
     <!-- versao gratuita do Font Awesome icons-->
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
@@ -36,7 +36,7 @@
             <!-- logo -->
             <div>
                 <a class="navbar-brand mx-auto">
-                    <img src="{% static './img/php_96.png' %}">
+                    <img src="{% static './img/python_72.png' %}">
                 </a>
             </div>
 
@@ -51,10 +51,10 @@
                     <a href="{% url 'escola' %}" class="nav-link">Início</a>
                     <a href="{% url 'cadastrar_tipoatividade' %}" class="nav-link">Tipos de Atividade</a>
                     <a href="{% url 'cadastrar_titulo' %}" class="nav-link">Títulos</a>
-                    <a href="./aluno/cadastroAluno.html" class="nav-link">Alunos</a>
-                    <a href="./instrutor/cadastroInstrutor.html" class="nav-link">Instrutor</a>
-                    <a href="./turma/cadastroTurma.html" class="nav-link">Turmas</a>
-                    <a href="./contato/contato.html" class="nav-link">Contato</a>
+                    <a href="{% url 'cadastrar_aluno' %}" class="nav-link">Alunos</a>
+                    <a href="{% url 'cadastrar_instrutor' %}" class="nav-link">Instrutor</a>
+                    <a href="{% url 'cadastrar_turma' %}" class="nav-link">Turmas</a>
+                    <a href="{% url 'registrar_contato' %}" class="nav-link">Contato</a>
                 </div>
             </div>
         </nav>

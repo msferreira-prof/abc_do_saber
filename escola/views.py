@@ -11,3 +11,6 @@ def abc123(request):
 def escola(request):
     return render(request, 'escola.html')
 
+def em_construcao(request):
+    return render(request, 'escola/paginaemconstrucao.html')
+

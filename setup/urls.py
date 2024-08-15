@@ -24,5 +24,16 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('escola/', include('escola.urls')),
     path('tipoatividade/', include('tipoatividade.urls')),
-    path('titulo/', include('titulo.urls')),    
+    path('titulo/', include('titulo.urls')),   
+    path('aluno/', include('aluno.urls')),   
+    path('instrutor/', include('instrutor.urls')),
+    path('turma/', include('turma.urls')),
+    path('contato/', include('contato.urls')),   
+         
+]
+
+# Add URL maps to redirect the base URL to our application
+from django.views.generic import RedirectView
+urlpatterns += [
+    path('', RedirectView.as_view(url='/escola/', permanent=True)),
 ]
