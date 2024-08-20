@@ -6,6 +6,6 @@ from tipoatividade import views
 urlpatterns = [
     # path('', inicio, name='inicio'),
     # path('fim/', fim, name='fim'),
-    path('', views.cadastrar, name='cadastrar'),
-    path('listar/', views.listar, name='listar')
+    path('', views.cadastrar, name='cadastrar_tipoatividade'),
+    path('listar/', views.listar, name='listar_tipoatividade')
 ]
