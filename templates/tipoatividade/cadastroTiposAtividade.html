@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="referrer" content="no-referrer">
     <title>Python - Exercícios</title>
 
     <!-- define e insere um favicon no documento HTML -->
@@ -65,14 +66,15 @@
     
 
     <main class="container m-2 w-75 mx-auto">
-        <form action="#" method="POST" name="frmCadastrarTiposAtividade" id="idFrmCadastrarTiposAtividade">
+        <form action="{% url 'cadastro_tipoatividade' %}" method="POST" name="frmCadastrarTiposAtividade" id="idFrmCadastrarTiposAtividade">
+            {% csrf_token %}
             <div class="form-group">
-                <label for='idDescricao'>Descrição</label>
-                <input class="form-control" type='text' id='idDescricao' name='descricao' placeholder='Informe a descrição' required>
+                <label for="idDescricao">Descrição</label>
+                <input class="form-control" type="text" id="idDescricao" name="descricao" placeholder="Informe a descrição" required>
             </div>
-            <div class='form-group text-center'>
-                <input type='reset'  value='Limpar' class='btn btn-primary btn-md'>
-                <input type='submit' value='Cadastrar' class='btn btn-primary btn-md' id="btnCadastrarTiposAtividade">
+            <div class="form-group text-center">
+                <input type="reset"  value="Limpar" class="btn btn-primary btn-md">
+                <input type="submit" value="Cadastrar" class="btn btn-primary btn-md" id="btnCadastrarTiposAtividade">
             </div>
         </form>
     </main>

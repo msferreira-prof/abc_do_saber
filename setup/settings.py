@@ -141,3 +141,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Trusted domains
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',  # For local development
+    'http://127.0.0.1:8000',  # Local development
+    'https://yourdomain.com',  # Production domain
+]

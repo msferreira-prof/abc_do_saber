@@ -29,7 +29,6 @@ urlpatterns = [
     path('instrutor/', include('instrutor.urls')),
     path('turma/', include('turma.urls')),
     path('contato/', include('contato.urls')),   
-         
 ]
 
 # Add URL maps to redirect the base URL to our application
