@@ -94,16 +94,18 @@
                 </thead>
 
                 <!-- linhas -->
-                {% for registro in tipos_atividade_lista %} 
-                <tr>
-                    <td>{{ registro.codigo }}</td>
-                    <td>{{ registro.descricao}}</td>
-                </tr>
-                {% empty %}
-                <tr>
-                    <td colspan="2">Não há Tipos de Atividade cadastrados</td>
-                </tr>
-                {% endfor %}
+                <tbody>
+                    {% for registro in tipos_atividade_lista %} 
+                    <tr>
+                        <td class="text-center">{{ registro.codigo }}</td>
+                        <td class="text-left">{{ registro.descricao }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="2" class="text-center">Não há Tipos de Atividade cadastrados</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
             </table>
 
         </div>

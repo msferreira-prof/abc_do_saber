@@ -70,8 +70,8 @@
         </div>
 
         <!-- formulario HTML -->
-        <form name="frmCadastrarInstrutor" action="#" method="post" class="my-label-color-purple">
-
+        <form name="frmCadastrarInstrutor" action="{% url 'cadastro_instrutor' %}" method="post" class="my-label-color-purple">
+            {% csrf_token %}
             <div class="form-group">
                 <label for="idNomeInstrutor" class="col-form-label">Nome do Instrutor</label>
                 <input class="form-control" type="text" id="idNomeInstrutor" name="nome"
@@ -104,10 +104,9 @@
                 <label for="idTitulo">Título do Professor</label>
                 <select class="form-control" id="idTitulo" name="codigoTitulo">
                     <option value="0">Selecione...</option>
-                    <option value="1">Professor Doutor</option>
-                    <option value="2">Professor Sabe-Tudo</option>
-                    <option value="3">Professor Estagiário</option>
-
+                    {% for registro in titulo_lista %}
+                        <option value="{{registro.codigo}}">{{registro.descricao}}</option>
+                    {% endfor %}
                 </select>
             </div>
 
