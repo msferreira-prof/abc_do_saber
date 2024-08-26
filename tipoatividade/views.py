@@ -25,10 +25,11 @@ def cadastro(request):
     if request.method == 'POST':
         form = TipoAtividadeForm(request.POST)
         if form.is_valid():
-            form.save()
-
-    else:
-        form = TipoAtividadeForm()
+            dados_ta = form.cleaned_data
+            tipo_atividade = TipoAtividade(
+                descricao = dados_ta['descricao']
+            )
+            tipo_atividade.save()
     
     return render(request, 'tipoatividade/cadastroTiposAtividade.html')
 
