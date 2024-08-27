@@ -94,19 +94,18 @@
                 </thead>
 
                 <!-- linhas -->
-                <tr>
-                    <td> 1 </td>
-                    <td> Professor Doutor </td>
-                </tr>
-                <tr>
-                    <td> 2 </td>
-                    <td> Professor Sabe-Tudo </td>
-                </tr>
-                <tr>
-                    <td> 3 </td>
-                    <td> Professor Estagiário </td>
-                </tr>
-
+                <tbody>
+                    {% for titulo in titulos_lista %}
+                    <tr>
+                        <td class="text-center">{{ titulo.codigo }}</td>
+                        <td class="text-left">{{ titulo.descricao }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="2" class="text-center">Não há Títulos cadastrados</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
             </table>
 
         </div>

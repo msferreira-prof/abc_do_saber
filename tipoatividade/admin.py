@@ -1,4 +1,6 @@
 from django.contrib import admin
+
+
 from tipoatividade.models import TipoAtividade
 
 # Register your models here.
