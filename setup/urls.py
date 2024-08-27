@@ -30,3 +30,9 @@ urlpatterns = [
     path('instrutor/', include('instrutor.urls')),
     path('turma/', include('turma.urls')),
 ]
+
+from django.views.generic import RedirectView
+urlpatterns += [
+    path('', RedirectView.as_view(url='/escola/', permanent=True)),
+]
+
