@@ -80,7 +80,7 @@
 
             <div class="form-group">
                 <label for='idRg'>RG</label>
-                <input class="form-control" type='text' id='idRg' name='rg' placeholder="Informe o RG" maxlength="45"
+                <input class="form-control" type='text' id='idRg' name='rg' placeholder="Informe o RG" maxlength="15"
                     required>
             </div>
 
@@ -102,7 +102,7 @@
 
             <div class="form-group">
                 <label for="idTitulo">Título do Professor</label>
-                <select class="form-control" id="idTitulo" name="codigoTitulo">
+                <select class="form-control" id="idTitulo" name="titulo">
                     <option value="0">Selecione...</option>
                     {% for registro in titulo_lista %}
                         <option value="{{registro.codigo}}">{{registro.descricao}}</option>

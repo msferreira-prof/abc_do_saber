@@ -5,6 +5,7 @@ from titulo.models import Titulo
 # Create your models here.
 class Instrutor(models.Model):
     """ Modelo representando um Instrutor """
+
     id = models.AutoField(primary_key=True, help_text="Id do Instrutor")
     rg = models.CharField(max_length=15, null=False, help_text='Informe o RG do Instrutor')
     nome = models.CharField(max_length=70, null=False, help_text='Informe o nome do Instrutor')
@@ -18,5 +19,4 @@ class Instrutor(models.Model):
     
     def get_absolute_url(self):
         return reverse("model_detail", kwargs={"pk": self.pk})
-    
     

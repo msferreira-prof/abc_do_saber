@@ -105,7 +105,7 @@
                         <td class="text-center">{{ registro.id }}</td>
                         <td class="text-left">{{ registro.nome }}</td>
                         <td class="text-center">{{ registro.rg }}</td>
-                        <td class="text-left">{{ registro.data_nascimento }}</td>
+                        <td class="text-center">{{ registro.dataNascimento|date:"SHORT_DATE_FORMAT" }}</td>
                         <td class="text-center">{{ registro.ddd }}</td>
                         <td class="text-left">{{ registro.telefone }}</td>
                         <td class="text-left">{{ registro.titulo.descricao}}</td>

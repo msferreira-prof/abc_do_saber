@@ -17,13 +17,14 @@ def listar(request):
 
 @csrf_exempt
 def cadastro(request):
-    if request.method == 'POST':
-        form = InstrutorForm(request.POST)
-        if form.is_valid():
-            dados_ta = form.cleaned_data
-            instrutor = Instrutor(
-                descricao = dados_ta['descricao']
-            )
-            instrutor.save()
-    
-    return render(request, 'instrutor/cadastroInstrutor.html')
+    form = InstrutorForm(request.POST or None)
+    if form.is_valid():
+        # "salva em memoria", permitindo alterar o model instrutor 
+        instrutor = form.save(commit=False)
+        instrutor.save()
+
+    form = InstrutorForm()
+
+    registros = Titulo.objects.all()
+    contexto = {'titulo_lista': registros}
+    return render(request, 'instrutor/cadastroInstrutor.html', contexto)
